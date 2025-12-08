@@ -36,7 +36,7 @@ type UpdateProfileOptions = {
 
 export const updateProfileHandler = async ({ ctx, input }: UpdateProfileOptions) => {
   const { user } = ctx;
-  const billingService = getBillingProviderService();
+  const billingService = null; //getBillingProviderService();
   const userMetadata = handleUserMetadata({ ctx, input });
   const locale = input.locale || user.locale;
   const featuresRepository = new FeaturesRepository(prisma);
